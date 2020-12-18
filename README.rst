@@ -1,6 +1,10 @@
 Twelve Factor App
 ========================================
 
+.. image:: https://readthedocs.org/projects/twelve-factor-app/badge/?version=latest
+:target: https://twelve-factor-app.readthedocs.io/en/latest/?badge=latest
+:alt: Documentation Status
+
 The sample app implemented using Twelve-Factor App methodology.
 
 I. Codebase
@@ -55,3 +59,5 @@ Run admin/management tasks as one-off processes
 Please refer to the `blog`_ for details
 
 .. _`blog`: https://medium.com/@vikramshinde/how-i-design-12-factor-cloud-native-app-on-gcp-using-python-e0af4fccb1b0
+
+The Documentation is available at https://twelve-factor-app.readthedocs.io/en/latest/
