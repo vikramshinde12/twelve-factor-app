@@ -1,3 +1,6 @@
+"""The module to interact with employee details.
+"""
+
 import os
 from flask import Flask, request, jsonify
 from google.cloud import firestore
@@ -5,15 +8,21 @@ from google.cloud import firestore
 app = Flask(__name__)
 
 
-@app.route('/api/v1/resources/employee/<employee_id>', methods=['GET'])
+@app.route('/<employee_id>', methods=['GET'])
 def get_emmployee(employee_id):
-    """
-    Get the employee details from firestore.
+    """ Retrieves employee details.
 
-    :param employee_id:
-    :return: Employee Details
-    """
+        Args:
+            employee_id
+        Returns:
+            Employee details : If user exists
+            404: if
 
+                * User does not exist
+        Raises:
+
+            TypeError: If a keyword other than ``client`` is used.
+        """
     client = firestore.Client()
     doc_ref = client.collection(u'employee').document(u'{}'.format(employee_id))
     doc = doc_ref.get()
